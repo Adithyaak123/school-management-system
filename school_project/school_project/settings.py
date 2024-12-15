@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-bbwm0tx#pg&+hox7b973tcv^^%l6^)ih^256y=mu*6#x(_h+c$
 DEBUG = True
 # 'school_app.onrender.com','127.0.0.1'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['school_app.onrender.com','127.0.0.1']
 
 
 # Application definition
@@ -51,7 +51,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'school_project.urls'
 
