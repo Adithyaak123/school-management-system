@@ -52,7 +52,7 @@ def teacherhome(request):
 def studenthome(request):
     return render(request,'stud_home.html')
 def Home(request):
-    return render(request,'Homepage.html')
+    return render(request,'index.html')
         
 def regteacher(request):
     if request.method=='POST':
